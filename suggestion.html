@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      nav {
+        background-color: #0d1002;
+        color: #ffffff;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 0px;
+      }
+      
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      nav ul li {
+        margin: 0 10px;
+      }
+
+      
+      nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 10px;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      nav ul li a:hover {
+        background-color: WHITE;
+        color: #24c6c6;
+      } 
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+      #text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #transparent-text {
+        font-size: 6em;
+        color: rgba(255, 255, 255, 0.7);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      
+        .form-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f1f1ec;
+            border-radius: 10px;
+          }
+          
+          .form-container h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #e56363;
+          }
+          
+          .form-group {
+            margin-bottom: 20px;
+          }
+          
+          .form-group label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #444;
+          }
+          
+          .form-group input,
+          .form-group textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #efefe9;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #444;
+          }
+          
+          .form-group textarea {
+            height: 150px;
+           
+          }
+          
+          button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #15b7ed;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #eff0ef;
+            cursor: pointer;
+          }
+          
+          button[type="submit"]:hover {
+            background-color: #00a1c9;
+          }
+          
+          
+    </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="solution.html">Solution</a></li>
+      <li><a href="Suggestion.html">Suggestion form</a></li>
+    </ul>
+  </nav>
+    <h1 align="center" style="color:rgb(11, 13, 12)">Give some solution to avoid climate change and save life on earth</h1>
+    <div class="form-container">
+        <h2>Suggestion Form for Climate Change</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="suggestion">Suggestion:</label>
+            <textarea id="suggestion" name="suggestion" placeholder="Enter your suggestion" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      
+    
+</body>
+</html>

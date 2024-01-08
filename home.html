@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate change</title>
+    <style>
+    nav {
+        background-color: #0d1002;
+        color: #ffffff;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 0px;
+      }
+      
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      nav ul li {
+        margin: 0 10px;
+      }
+
+      
+      nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 10px;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      nav ul li a:hover {
+        background-color: WHITE;
+        color: #24c6c6;
+      } 
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+      #text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #transparent-text {
+        font-size: 6em;
+        color: rgba(255, 255, 255, 0.7);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      
+      #videoBG {
+        position:fixed;
+        z-index:-1;
+      }
+      @media(min-aspect-ratio:16/9){
+        #videoBG{
+          width:100%;
+          height:100%
+        }
+      }
+     @media(max-aspect-ratio:16/9){
+      #videoBG{
+        width:100%;
+        height:auto;
+      
+      }
+    }
+      @media(max-width:767px){
+        #videoBG{
+          display: none;
+        }
+        body{
+          background:url('');
+          background-size:cover;
+        }
+      }
+      /* General styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main content styles */
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+ul {
+  margin-top: 20px;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.half {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  text-align: center;
+}
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  padding: 20px;
+}
+.section img {
+  max-width: 50%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+
+
+/* Footer styles */
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+   
+    </style>
+      
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="solution.html">Solution</a></li>
+      <li><a href="Suggestion.html">Suggestion form</a></li>
+    </ul>
+  </nav>
+      <video id="textdiv"poster="background.jpg"autoplay muted loop width="100%">
+        <source src="video1.mp4"type="video/mp4">
+        </video>
+        <video id="background-video" autoplay loop muted>
+          <source src="your-video-source.mp4" type="video/mp4">
+        </video>
+        <div id="text-container">
+         <h1 style="text-align:center" id="transparent-text">Climate Change</h1>
+         
+
+        </div>
+        <hr>   
+ <header>
+    <h1>Climate Change Website</h1>
+  </header>
+  <main>
+    <h2>What is Climate Change?</h2>
+    <p>Climate change refers to a long-term change in the Earth's climate, typically resulting from human activities such as burning fossil fuels and deforestation. The most significant effect of climate change is global warming, which can lead to rising sea levels, more frequent and severe weather events, and changes in plant and animal habitats.</p>
+    <h2>What Can We Do About Climate Change?</h2>
+    <p>There are many things that individuals and governments can do to reduce the effects of climate change. Some examples include:</p>
+    <ul>
+      <li>Reducing carbon emissions by using renewable energy sources and electric vehicles</li>
+      <li>Planting trees and reducing deforestation</li>
+      <li>Encouraging sustainable agriculture and reducing food waste</li>
+    </ul>
+  </main>
+  <title>Climate Change Graph</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <body>
+    <div style="width: 50%; margin: 0 auto;">
+      <h1 style="text-align: center;">Climate Change Graph</h1>
+      <canvas id="myChart"></canvas>
+    </div>
+    <script>
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['2000', '2005', '2010', '2015', '2020'],
+          datasets: [{
+            label: 'Global Temperature',
+            data: [0.47, 0.61, 0.73, 0.87, 1.02],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 3
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                fontColor: 'black',
+                fontSize: 18
+              },
+              scaleLabel: {
+                display: true,
+                labelString: 'Global Temperature in Celsius',
+                fontColor: 'black',
+                fontSize: 20
+              }
+            }],
+            xAxes: [{
+              ticks: {
+                fontColor: 'black',
+                fontSize: 18
+              },
+              scaleLabel: {
+                display: true,
+                labelString: 'Year',
+                fontColor: 'black',
+                fontSize: 20
+              }
+            }]
+          },
+          legend: {
+            labels: {
+              fontColor: 'black',
+              fontSize: 20
+            }
+          }
+        }
+      });
+    </script>
+    <div class="container">
+      <div class="half">
+        <h2>Climate Change Pie Chart</h2>
+        <p>This pie chart shows the percentage of greenhouse gas emissions by source:</p>
+        <canvas id="climate-change-chart"></canvas>
+      </div>
+      <div class="half">
+        <h2>About Climate Change</h2>
+        <p>Climate change refers to the long-term changes in Earth's climate, including increases in temperature, changes in precipitation, and sea level rise. These changes are largely caused by human activities that release greenhouse gases, such as carbon dioxide and methane, into the atmosphere.</p>
+        <p>Climate change has significant impacts on the environment, including more frequent and severe weather events, loss of biodiversity, and disruptions to ecosystems and natural resources. It also has social and economic impacts, such as reduced food security, increased migration, and economic losses from natural disasters.</p>
+        <p>To address climate change, it is important to reduce greenhouse gas emissions and transition to a more sustainable and resilient economy.</p>
+      </div>
+    </div>
+    <script>
+      var ctx = document.getElementById("climate-change-chart").getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ["Carbon Dioxide", "Methane", "Nitrous Oxide", "Other GHGs"],
+          datasets: [{
+            data: [60, 20, 6, 14],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(255, 206, 86, 0.8)',
+              'rgba(75, 192, 192, 0.8)'
+            ]
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Climate Change by Greenhouse Gas Emissions',
+            fontSize: 20,
+            fontColor: 'black',
+            fontStyle: 'bold'
+          }
+        }
+      });
+    </script>
+    <h1>Change in Sea Level</h1>
+	<div class="section">
+		<img src="image/image5.png" alt="My Image"  width = "800" height = "800">
+		<p><h3></h3>Rising temperatures cause ice to melt and oceans <br>to warm,
+      Which leads to sea level rise, a<br> climate change norm,
+      Coastal cities and<br> ecosystems bear the brunt of the harm,<br>
+      Urgent action is needed to mitigate and reform.<h3></p>
+	</div>
+  <footer>
+    <p>&copy; 2023 ClimateChange.com. All rights reserved</p>
+  </footer>
+  
+</body>
+</html>
+
+</body>
+</html>

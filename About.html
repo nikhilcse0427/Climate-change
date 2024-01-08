@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  nav {
+    background-color: #0d1002;
+    color: #ffffff;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  nav ul li a:hover {
+    background-color: WHITE;
+    color: #24c6c6;
+  } 
+  #background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+  #text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #transparent-text {
+    font-size: 6em;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+    .heading {
+        font-size: 48px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        color: #b91037; /* Teal */
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+    .centered-heading {
+        text-align: center;
+        font-size: 36px;
+      }
+      
+      .stylish-text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        color: #1e1e1e;
+        text-transform: uppercase;
+      }
+      
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -15px;
+      }
+      .column {
+        flex: 1;
+        max-width: calc(25% - 30px);
+        margin: 0 15px;
+      }
+     
+      .image {
+        position: relative;
+        overflow: hidden;
+        border: 2px solid #000404e4;
+      }
+      .image img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+      .image:hover img {
+        transform: scale(1.1);
+      }
+      .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+      .image:hover .caption {
+        opacity: 1;
+      }
+      .video-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      .video-container {
+        width: 48%;
+        margin-bottom: 20px;
+      }
+      
+      .video-container iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+      }
+      
+
+    
+</style>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="solution.html">Solution</a></li>
+      <li><a href="Suggestion.html">Suggestion form</a></li>
+    </ul>
+  </nav>
+    <h1 class="heading">Climate Change</h1>
+    
+    <hr style="color:gray">
+   <p><h2 style="font-family: Arial; color: rgb(4, 1, 14);">The climatic conditions on Earth are changing due to climate change. Several internal and external variables, such as solar radiation,<br> 
+  variations in the Earth's orbit, volcanic eruptions, plate tectonics, etc., are to blame for this.</h2></P>
+
+  <p><h2 style="font-family: Arial; color: rgb(4, 1, 20);">There are strategies for climate change reduction. If not implemented, the weather might get worse, there might be water scarcity,<br>
+  there could be lower agricultural output, and it might affect people's ability to make a living. In order to breathe clean air<br>
+  and drink pure water, you must concentrate on limiting human activity. These are the simple measures that may be taken to safeguard<br>
+  the environment and its resources.</h2></P>
+  <p><h2 style="font-family: Arial; color: rgb(6, 2, 22);">According to the definition of climate, long-term periodic changes in the weather patterns that have been recorded for centuries are referred to as climate. Climate change results from the simultaneous occurrence of various changes on Earth since its creation. Climate change occurs in cycles; it began during a cooler ice age and is now much warmer than it was two million years ago. The Sun, which is the ultimate source of energy and continuously powers the weather system, is responsible for the millions of living things we see on Earth today.
+
+      To name a few major changes, the world is currently facing unjustified droughts, unpredictable weather patterns, sudden rains, and snowfall, there is a steady fluctuation in temperatures leading to tragedies like forest fires, and the weather is no longer predictable enough. The changes are unpredictable, and it is becoming more and more difficult to keep track of them. Both positive and negative effects of these changes on human lives are significant.
+      
+      <p>Since the beginning of evolution, mankind have continuously benefited from nature. This has produced Some of these include the high levels of carbon dioxide in the environment, other dangerous substances in the air and water, and the complete depletion of fossil fuels as a result of frequent use. Constant exploitation of natural resources and a lack of major action to improve the situation finally led to the buildup of hazardous gases in the atmosphere. Climate change also contributes to the ozone layer’s destruction from greenhouse gases.
+ .</h2></p>
+ <hr style="color:gray">
+      <div class="row">
+          <div class="column">
+            <div class="image">
+              <img src="image/section1.jpg">
+              <div class="caption">Pollution</div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="image">
+              <img src="image/section2.jpg" height="100%">
+              <div class="caption">Migration of Animals</div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="image">
+              <img src="image/section3.jpg">
+              <div class="caption">Pollution Effect</div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="image">
+              <img src="image/section4.jpg">
+              <div class="caption">Protest
+
+              </div>
+            </div>
+          </div>
+        </div>   
+        <hr>
+          <div class="video-section">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/WkvPdUtYhX8"></iframe>
+            </div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/PhqaRE8w2gI"></iframe>
+            </div>
+          </div>
+          
+          
+        <script>
+            <h1 class="centered-heading">Climate <span class="stylish-text">Change</span></h1>
+        
+              
+        </script> 
+    
+</body>
+</html>
